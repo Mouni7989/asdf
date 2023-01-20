@@ -1,0 +1,9 @@
+s=input()
+res=''
+n=input()
+for i in range(0,n):
+    if s[i].isdigit():
+        k=int(s[i])
+        for j in range(0,k):
+            res=res+s[i-1]
+print(res)
