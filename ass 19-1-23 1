@@ -1,0 +1,16 @@
+def isBalanced(s):
+    stack = []
+    pairs = {"{": "}", "[": "]", "(" : ")"}
+    for i in s:
+        if not stack:
+            stack.append(i)
+        elif i == pairs.get(stack[-1]):
+            stack.pop()
+        else:
+            stack.append(i)
+    return "YES" if not stack else "NO"
+
+
+for i in range(int(input())):
+    s = input()
+    print(isBalanced(s))
